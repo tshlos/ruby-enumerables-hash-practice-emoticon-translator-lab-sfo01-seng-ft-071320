@@ -28,8 +28,7 @@ def get_english_meaning(file, emoticon)
   
     emoticons = load_library(file)
     output = emoticons.find do |name, value|
-    
       value[:english] == emoticon
     end
-    output[0]
+    output ? output[0] : nil
 end
