@@ -21,7 +21,7 @@ def get_japanese_emoticon(file, emoticon)
   output = emoticons.find do |name, value|
     value[:japanese] == emoticon
   end
-  output[0]
+  output ? output[0] : nil
 end
 
 def get_english_meaning(file, emoticon)
