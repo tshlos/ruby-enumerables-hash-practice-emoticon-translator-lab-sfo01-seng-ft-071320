@@ -30,5 +30,5 @@ def get_english_meaning(file, emoticon)
     output = emoticons.find do |name, value|
       value[:japanese] == emoticon
     end
-    output ? output[0] : "Sorry, that emoticon was not found"
+    output ? output : "Sorry, that emoticon was not found"
 end
